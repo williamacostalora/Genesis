@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule an Appointment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #ffcc80;
+            border-bottom: 1px solid #ccc;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin: 0;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin: 0 auto;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+        input[type="submit"] {
+            background-color: #ff9800;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #f57c00;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Schedule an Appointment</h1>
+    </header>
+    <div>
+        <form name="appointment-form" netlify></form>
+           <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+        
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br>
+        
+        <br> <label for="date">Select a Date:</label>
+        <select id="date" name="date" required>
+            <option value="monday">Monday</option>
+            <option value="tuesday">Tuesday</option>
+            <option value="wednesday">Wednesday</option>
+            <option value="thursday">Thursday</option>
+            <option value="friday">Friday</option>
+        </select><br>
+        
+        <br> <label for="time">Select a Time:</label>
+        <select id="time" name="time" required>
+            <option value="8-9">8:00 AM - 9:00 AM</option>
+            <option value="9-10">9:00 AM - 10:00 AM</option>
+            <option value="17-18">5:00 PM - 6:00 PM</option>
+            <option value="19-20">7:00 PM - 8:00 PM</option>
+        </select><br>
+        
+        <br> <label for="interests">Interests:</label>
+        <input type="checkbox" id="speaking" name="interests[]" value="speaking">
+        <label for="speaking">Speaking</label>
+        
+        <input type="checkbox" id="listening" name="interests[]" value="listening">
+        <label for="listening">Listening</label>
+        
+        <input type="checkbox" id="reading" name="interests[]" value="reading">
+        <label for="reading">Reading</label>
+        
+        <input type="checkbox" id="writing" name="interests[]" value="writing">
+        <label for="writing">Writing</label>
+        
+        <input type="checkbox" id="all" name="interests[]" value="all">
+        <label for="all">All</label>
+        
+        <label for="message">Additional Message:</label>
+        <textarea id="message" name="message"></textarea>
+        
+        <input type="submit" value="Submit">
+    </form>
+        
+    </div>
+</body>
+</html>
